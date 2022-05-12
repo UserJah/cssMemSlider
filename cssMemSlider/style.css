@@ -1,0 +1,80 @@
+body {
+    background-color: azure;
+}
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+    overflow: hidden;
+    max-width: 50%;
+    height: auto;
+}
+
+/* .text {
+    overflow: hidden;
+    max-width: 30%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+} */
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 25%;
+    transition: 0.5s;
+
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+input {
+    display: none;
+}
+
+.navigation {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+    gap: 1vw;
+}
+
+.navigation .navigation-item {
+    width: 2vw;
+    height: 1vh;
+    border: 0.3vh solid black;
+}
+
+.navigation .navigation-item:hover {
+    background-color: black;
+    transition: 0.5s;
+}
+
+#s1:checked ~  .s1 {
+    margin-left: 0;
+}
+
+#s2:checked ~ .s1 {
+    margin-left: -25%;
+}
+
+#s3:checked ~ .s1 {
+    margin-left: -50%;
+}
+
+#s4:checked ~ .s1 {
+    margin-left: -75%;
+}
