@@ -57,7 +57,7 @@ body {
 
 .slider {
     overflow: hidden;
-    height: auto;
+    height: 100%;
     grid-area: slider;
 }
 
@@ -71,7 +71,6 @@ body {
 
 .slides {
     width: 400%;
-    height: 100%;
     display: flex;
 }
 
@@ -88,6 +87,11 @@ body {
     height: 100%;
     display: flex;
     border-radius: 5%;
+}
+
+.slide:last-child img{
+    width: 50%;
+    align-self: center;
 }
 
 input {
