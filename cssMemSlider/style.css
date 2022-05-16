@@ -1,23 +1,48 @@
 body {
     background-color: azure;
-    font-size: 2em;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 
-.wrapper {  
+.wrapper {
+    padding: 10%;
+    max-width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-areas: "slider slider"
+                        "text navigation";
+    grid-row-gap: 10px;
+}
+
+.navigation {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 1em;
+    gap: 1vw;
+    grid-area: navigation;
+    justify-self: flex-end;
+}
+
+.text-block {
+    overflow: hidden;
+    height: auto;
+    grid-area: text;
+}
+
+.text {
+    width: 400%;
+    display: flex;
+    height: 100%;
 }
 
 .slider {
     overflow: hidden;
-    max-width: 50%;
     height: auto;
+    grid-area: slider;
 }
-
 
 
 .slides {
@@ -34,8 +59,6 @@ body {
 }
 
 span {
-    margin-top: 2em;
-    width: 30%;
 }
 
 .slide img{
@@ -44,30 +67,11 @@ span {
     display: flex;
 }
 
-.text-block {
-    overflow: hidden;
-    max-width: 14%;
-    height: auto;
-    align-self: center;
-}
-
-.text {
-    width: 400%;
-    height: 100%;
-    display: flex;
-}
-
 input {
     display: none;
 }
 
-.navigation {
-    margin-top: -3%;
-     width: 20%;
-     display: flex;
-     justify-content: center;
-    gap: 1vw;
-}
+
 
 .navigation .navigation-item {
     width: 1vw;
@@ -99,5 +103,21 @@ input {
 }
 
 #s4:checked ~ .s1 {
+    margin-left: -75%;
+}
+
+#s1:checked ~  .text-block {
+    margin-left: 0;
+}
+
+#s2:checked ~ .text-block {
+    margin-left: -25%;
+}
+
+#s3:checked ~ .text-block {
+    margin-left: -50%;
+}
+
+#s4:checked ~ .text-block {
     margin-left: -75%;
 }
